@@ -3,7 +3,7 @@
 \usepackage{algorithm,algpseudocode}
 
 \title{Esquemas de distribución de trabajos para un sistema ERP en la nube.}
-\shorttitle{Esquemas de Distribucion ERP}
+\shorttitle{Esquemas de distribución de trabajos para un sistema ERP en la nube.}
 
 \threeauthors{Cindy Canul\\ \texttt{110300083@ucaribe.edu.mx}}{Cristian Kumul\\ \texttt{110300097@ucaribe.edu.mx}}{Jonathan Peraza\\ \texttt{110300079@ucaribe.edu.mx}}
 \threeaffiliations{Ing. Telemática\\Universidad del Caribe}{Ing. Telemática\\Universidad del Caribe}{Ing. Telemática\\Universidad del Caribe}
@@ -15,66 +15,69 @@
 	La complejidad de la administraciónd de los recursos y la calendarización incrementa con el número de tareas, pues es un problema NP-difícil debido a las distintas características de cada \textit{host} y lo heterogéneas que son las tareas. 
 }
 
+
 \keywords{Cloud Computing, Scheduling}
+
+\rightheader{Esquemas de distribución de trabajos para un sistema ERP en la nube.}
+\leftheader{Esquemas de distribución de trabajos para un sistema ERP en la nube.}
 
 \begin{document}
 \maketitle    
                         
 \section{Introducción}
 
-La tecnolog\'ia en la nube ha desarrollado una infraestructura fuerte despu\'es del surgimiento del c\'omputo distribuido (\citeauthor{chen2009cloud}, \citeyear{chen2009cloud}). Para obtener las ventajas de dicha tecnolog\'ia los usuarios simplemente necesitar\'an conectarse a internet y de esta manera tendr\'an el acceso al procesamiento de manera remota (\citeauthor{aranganathan2011aco}, \citeyear{aranganathan2011aco}). Sin embargo, para aprovechar el m\'aximo potencial de \'estos recursos, es necesario tener en consideraci\'on algunas variables, ya que en un entorno en la nube existe un comportamiento din\'amico de los recursos a manera que se les provea a los usuarios el servicio (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}).
-Una de las pr\'acticas con mayor importancia en la nube es la calendarizaci\'on, ya que tiene como objetivo administrar las tareas del centro de datos para optimizar los recursos del mismo. De esta manera la eficiencia de la carga de trabajo en la nube aumenta (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}).
-En general, el objetivo de la calendarizaci\'on en la nube es utilizar los recursos de manera apropiada, mientras la carga de trabajo es distribuida uniformemente para mejorar los tiempos de ejecuci\'on (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}).
-Debido a la atenci\'on que se tiene en la tecnolog\'ia en la nube, los centros de datos han tomado un papel muy importante para los servicios empresariales (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}). 
-Un centro de datos est\'a compuesto por miles de servidores virtuales ejecut\'andose en una instancia de tiempo alojando muchas tareas, al mismo tiempo el centro de datos recibe miles de peticiones a esas tareas. Es aqu\'i en donde la programaci\'on de trabajos tiene un rol muy importante para el c\'omputo en la nube, ya que influye en el rendimiento del mismo (\citeauthor{srinivasan2014cloud}, \citeyear{srinivasan2014cloud}). 
+La tecnolog\'ia en la nube ha desarrollado una infraestructura fuerte despu\'es del surgimiento del c\'omputo distribuido \cite{chen2009cloud}. Para obtener las ventajas de dicha tecnolog\'ia los usuarios simplemente necesitar\'an conectarse a internet y de esta manera tendr\'an el acceso al procesamiento de manera remota \cite{aranganathan2011aco}. Sin embargo, para aprovechar el m\'aximo potencial de \'estos recursos, es necesario tener en consideraci\'on algunas variables, ya que en un entorno en la nube existe un comportamiento din\'amico de los recursos a manera que se les provea a los usuarios el servicio \cite{shimpy2014different}.
+Una de las pr\'acticas con mayor importancia en la nube es la calendarizaci\'on, ya que tiene como objetivo administrar las tareas del centro de datos para optimizar los recursos del mismo. De esta manera la eficiencia de la carga de trabajo en la nube aumenta \cite{shimpy2014different}.
+En general, el objetivo de la calendarizaci\'on en la nube es utilizar los recursos de manera apropiada, mientras la carga de trabajo es distribuida uniformemente para mejorar los tiempos de ejecuci\'on \cite{shimpy2014different}.
+Debido a la atenci\'on que se tiene en la tecnolog\'ia en la nube, los centros de datos han tomado un papel muy importante para los servicios empresariales \cite{shimpy2014different}. 
+Un centro de datos est\'a compuesto por miles de servidores virtuales ejecut\'andose en una instancia de tiempo alojando muchas tareas, al mismo tiempo el centro de datos recibe miles de peticiones a esas tareas. Es aqu\'i en donde la programaci\'on de trabajos tiene un rol muy importante para el c\'omputo en la nube, ya que influye en el rendimiento del mismo \cite{srinivasan2014cloud}. 
 
-El problema de la calendarizaci\'on pertenece a los algoritmos NP-Dif\'icil, lo cual tiene un amplio rango de soluciones posibles y se toma mucho m\'as tiempo de encontrar una respuesta \'optima, ya que no existe un m\'etodo para resolver estas inc\'ognitas. Sin embargo, es posible estar cerca de la mejor soluci\'on contemplando algunos entornos (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}).
+El problema de la calendarizaci\'on pertenece a los algoritmos NP-Dif\'icil, lo cual tiene un amplio rango de soluciones posibles y se toma mucho m\'as tiempo de encontrar una respuesta \'optima, ya que no existe un m\'etodo para resolver estas inc\'ognitas. Sin embargo, es posible estar cerca de la mejor soluci\'on contemplando algunos entornos \cite{shimpy2014different}.
 
 \section{Estado del Arte}
 
 Los siguientes algoritmos de calendarizaci\'on actualmente est\'an prevaleciendo en la nube:
 \begin{itemize}
-	\item \textit{\textbf{Resource-Aware-Scheduling Algorithm (RASA):}} Parsa, Entezari-Maleki (2009) proponen el algoritmo \textit{RASA}, el cual utiliza las ventajas de dos algoritmos tradicionales \textit{(Max-min y Min-min)} y cubre sus desventajas. Aunque el tiempo l\'imite, la tasa de llegada, costo de ejecución y costo de comunicaci\'on no est\'an considerados (\citeauthor{parsa2009rasa}, \citeyear{parsa2009rasa}).
+	\item \textit{\textbf{Resource-Aware-Scheduling Algorithm (RASA):}} Parsa, Entezari-Maleki (2009) proponen el algoritmo \textit{RASA}, el cual utiliza las ventajas de dos algoritmos tradicionales \textit{(Max-min y Min-min)} y cubre sus desventajas. Aunque el tiempo l\'imite, la tasa de llegada, costo de ejecución y costo de comunicaci\'on no est\'an considerados \cite{parsa2009rasa}.
 	
 	
-	\item \textit{\textbf{RSDC (Reliable Scheduling Distributed In Cloud Computing):}} Delevar, Javanmard, Shabestari y Talebi (2012) proponen un algoritmo confiable en un entorno en la nube, en este algoritmo los trabajos importantes son divididos en sub-trabajos, de tal manera que se puedan balancear las peticiones (\citeauthor{delavar2012rsdc}, \citeyear{delavar2012rsdc}).
+	\item \textit{\textbf{RSDC (Reliable Scheduling Distributed In Cloud Computing):}} Delevar, Javanmard, Shabestari y Talebi (2012) proponen un algoritmo confiable en un entorno en la nube, en este algoritmo los trabajos importantes son divididos en sub-trabajos, de tal manera que se puedan balancear las peticiones \cite{delavar2012rsdc}.
 	
 	
-	\item \textit{\textbf{An Optimal Model for Priority based Service Scheduling Policy for Cloud Computing Environment:}} Dakshayini, Gurupased (2011), proponen un nuevo algoritmo de calendarizaci\'on que se basa en la prioridad y un esquema de control de admisi\'on. En este algoritmo, la prioridad se asigna a cada proceso admitido en la cola (\citeauthor{dakshayini2011optimal}, \citeyear{dakshayini2011optimal}) . 
+	\item \textit{\textbf{An Optimal Model for Priority based Service Scheduling Policy for Cloud Computing Environment:}} Dakshayini, Gurupased (2011), proponen un nuevo algoritmo de calendarizaci\'on que se basa en la prioridad y un esquema de control de admisi\'on. En este algoritmo, la prioridad se asigna a cada proceso admitido en la cola \cite{dakshayini2011optimal}. 
 	
 	
-	\item \textit{\textbf{Pre-emptable Shortest Job Next Scheduling algorithm (PSJN):}}  Este algoritmo se propone en una nube privada. Utiliza la t\'ecnica de suscripci\'on preferente del algoritmo de \textit{Round Robin} junto con el siguiente proceso m\'as corto \textit{(PSN)}. Brinda beneficios de costos y mejora tiempo de respuesta y tiempo de ejecuci\'on (\citeauthor{nishant}, \citeyear{nishant}). 
+	\item \textit{\textbf{Pre-emptable Shortest Job Next Scheduling algorithm (PSJN):}}  Este algoritmo se propone en una nube privada. Utiliza la t\'ecnica de suscripci\'on preferente del algoritmo de \textit{Round Robin} junto con el siguiente proceso m\'as corto \textit{(PSN)}. Brinda beneficios de costos y mejora tiempo de respuesta y tiempo de ejecuci\'on \cite{nishant}. 
 	
 	
-	\item \textit{\textbf{User-priority Guided Min-min scheduling algorithm:}} Se realiza una mejora para el algoritmo de balanceo de cargas, a trav\'es del algoritmo \textit{Min-min} para la calendarizaci\'on de trabajos con el fin de minimizar el tiempo de terminaci\'on del \'ultimo trabajo \textit{(makespan)} y maximizar la utilizaci\'on de los recursos (\citeauthor{chen2013user}, \citeyear{chen2013user}). 
+	\item \textit{\textbf{User-priority Guided Min-min scheduling algorithm:}} Se realiza una mejora para el algoritmo de balanceo de cargas, a trav\'es del algoritmo \textit{Min-min} para la calendarizaci\'on de trabajos con el fin de minimizar el tiempo de terminaci\'on del \'ultimo trabajo \textit{(makespan)} y maximizar la utilizaci\'on de los recursos \cite{chen2013user}. 
 \end{itemize}
 
 \section{Marco Teórico}
 
-El c\'omputo en la nube es una tecnolog\'ia emergente, la cual est\'a compuesta por un grupo de recursos heterog\'eneos que proveen servicios a trav\'es de internet (\citeauthor{agarwal2014efficient}, \citeyear{agarwal2014efficient}).
-Esta tecnolog\'ia permite a los consumidores y negocios utilizar aplicaciones sin necesidad de instalaci\'on y con acceso a sus archivos personales en cualquier computadora con acceso a internet (\citeauthor{ahmed2012advanced}, \citeyear{ahmed2012advanced}). 
+El c\'omputo en la nube es una tecnolog\'ia emergente, la cual est\'a compuesta por un grupo de recursos heterog\'eneos que proveen servicios a trav\'es de internet \cite{agarwal2014efficient}.
+Esta tecnolog\'ia permite a los consumidores y negocios utilizar aplicaciones sin necesidad de instalaci\'on y con acceso a sus archivos personales en cualquier computadora con acceso a internet \cite{ahmed2012advanced}. 
 El c\'omputo en la nube se puede clasificar de dos maneras:
 \begin{itemize}
 	\item Por la ubicaci\'on: 
 	\begin{itemize}
-		\item \textbf{Nube P\'ublica:} La infraestructura de c\'omputo se puede compartir entre cualquier organizaci\'on (\citeauthor{ahmed2012advanced}, \citeyear{ahmed2012advanced}).
-		\item \textbf{Nube Privada:} La infraestructura de c\'omputo es dedicada a una organizaci\'on en particular y no se comparte con otras organizaciones (\citeauthor{ahmed2012advanced}, \citeyear{ahmed2012advanced}).
-		\item \textbf{Nube H\'ibrida:} Las organizaciones pueden albergar sus aplicaciones cr\'iticas en nubes privadas y las aplicaciones con menos problemas de seguridad las puede albergar en nubes p\'ublicas (\citeauthor{ahmed2012advanced}, \citeyear{ahmed2012advanced}).
+		\item \textbf{Nube P\'ublica:} La infraestructura de c\'omputo se puede compartir entre cualquier organizaci\'on \cite{ahmed2012advanced}.
+		\item \textbf{Nube Privada:} La infraestructura de c\'omputo es dedicada a una organizaci\'on en particular y no se comparte con otras organizaciones \cite{ahmed2012advanced}.
+		\item \textbf{Nube H\'ibrida:} Las organizaciones pueden albergar sus aplicaciones cr\'iticas en nubes privadas y las aplicaciones con menos problemas de seguridad las puede albergar en nubes p\'ublicas \cite{ahmed2012advanced}.
 	\end{itemize}
 	\item Por el tipo de servicios ofrecidos: 
 	\begin{itemize}
-		\item \textit{\textbf{Infrastructure as a Service (IaaS):}} En \'este nivel, la infraestructura se ofrece como servicio hacia los solicitantes en forma de M\'aquinas Virtuales \textit{(VM)} (\citeauthor{agarwal2014efficient}, \citeyear{agarwal2014efficient}).
-		\item \textit{\textbf{Platform as a Service (PaaS):}} Es una plataforma de desarrollo de aplicaciones que se provee como servicio hacia los desarrolladores para crear aplicaciones basadas en web (\citeauthor{agarwal2014efficient}, \citeyear{agarwal2014efficient}).
-		\item \textit{\textbf{Software as a Service (SaaS):}} En \'este nivel el proveedor en la nube provee las aplicaciones de \textit{software} (\citeauthor{agarwal2014efficient}, \citeyear{agarwal2014efficient}).
+		\item \textit{\textbf{Infrastructure as a Service (IaaS):}} En \'este nivel, la infraestructura se ofrece como servicio hacia los solicitantes en forma de M\'aquinas Virtuales \textit{(VM)} \cite{agarwal2014efficient}.
+		\item \textit{\textbf{Platform as a Service (PaaS):}} Es una plataforma de desarrollo de aplicaciones que se provee como servicio hacia los desarrolladores para crear aplicaciones basadas en web \cite{agarwal2014efficient}.
+		\item \textit{\textbf{Software as a Service (SaaS):}} En \'este nivel el proveedor en la nube provee las aplicaciones de \textit{software} \cite{agarwal2014efficient}.
 	\end{itemize}
 \end{itemize}
 
 \section{Desarrollo}
 
- \textit{\textbf{CloudSim}} es un nuevo, generalizado y extensible \textit{framework} de simulaci\'on, que permite el modelaje, simulaci\'on y experimentaci\'on de infraestructuras emergentes de c\'omputo en la nube y servicios de aplicaci\'on (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, p. 2).
+ \textit{\textbf{CloudSim}} es un nuevo, generalizado y extensible \textit{framework} de simulaci\'on, que permite el modelaje, simulaci\'on y experimentaci\'on de infraestructuras emergentes de c\'omputo en la nube y servicios de aplicaci\'on \cite{calheiros2011cloudsim}.
 
 
-\setcounter{figure}{2}
 \renewcommand\thefigure{\arabic{figure}}
 \begin{figure}[h!]
 	\centering
@@ -87,16 +90,16 @@ El c\'omputo en la nube se puede clasificar de dos maneras:
 Entre los componentes que proporciona dicho \textit{framework} se encuentran los siguientes:
 
 \begin{itemize}
-	\item \textit{\textbf{Cloudlet:}} Esta clase modela las aplicaciones de servicio basadas en la nube como pueden ser env\'io de contenido, redes sociales, y flujo de trabajo empresarial (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
-	\item \textit{ \textbf{Datacenter:}} Esta clase modela el núcleo de los servicios en un nivel de infraestructura \textit{(hardware)} que son ofrecidos por \textit{Cloud Providers (Amazon, Azure, App Engine)}. Estos son encapsulados en un conjunto de \textit{host} que pueden ser homogéneos o heterogéneos con respecto a sus configuraciones de \textit{hardware} (memoria, n\'ucleos, capacidad, y almacenamiento) (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
-	\item \textit{ \textbf{DatacenterBroker:}} Esta clase modela un \textit{broker}, el cual es responsable de mediar las negociaciones entre el \textit{SaaS} y los \textit{Cloud providers}; y dichas negociaciones son manejadas por los requerimientos \textit{QoS} (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
-	\item  \textit{\textbf{Host:}} Esta clase modela los recursos f\'isicos como una computadora o un servidor de almacenamiento (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
-	\item  \textit{\textbf{Vm:}} Esta clase modela una M\'aquina Virtual \textit{(VM)}, la cual es administrada y hosteada por un componente \textit{host} en la nube. Cada \textit{VM} tiene acceso a un componente que almacena las siguientes características relacionadas a una \textit{VM}: memoria accesible, procesador y tamaño de almacenamiento (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
+	\item \textit{\textbf{Cloudlet:}} Esta clase modela las aplicaciones de servicio basadas en la nube como pueden ser env\'io de contenido, redes sociales, y flujo de trabajo empresarial \cite{calheiros2011cloudsim}.
+	\item \textit{ \textbf{Datacenter:}} Esta clase modela el núcleo de los servicios en un nivel de infraestructura \textit{(hardware)} que son ofrecidos por \textit{Cloud Providers (Amazon, Azure, App Engine)}. Estos son encapsulados en un conjunto de \textit{host} que pueden ser homogéneos o heterogéneos con respecto a sus configuraciones de \textit{hardware} (memoria, n\'ucleos, capacidad, y almacenamiento) \cite{calheiros2011cloudsim}.
+	\item \textit{ \textbf{DatacenterBroker:}} Esta clase modela un \textit{broker}, el cual es responsable de mediar las negociaciones entre el \textit{SaaS} y los \textit{Cloud providers}; y dichas negociaciones son manejadas por los requerimientos \textit{QoS} \cite{calheiros2011cloudsim}.
+	\item  \textit{\textbf{Host:}} Esta clase modela los recursos f\'isicos como una computadora o un servidor de almacenamiento \cite{calheiros2011cloudsim}.
+	\item  \textit{\textbf{Vm:}} Esta clase modela una M\'aquina Virtual \textit{(VM)}, la cual es administrada y hosteada por un componente \textit{host} en la nube. Cada \textit{VM} tiene acceso a un componente que almacena las siguientes características relacionadas a una \textit{VM}: memoria accesible, procesador y tamaño de almacenamiento \cite{calheiros2011cloudsim}.
 \end{itemize}
 
 \subsection{Implementaci\'on y evaluación de los Algoritmos}
 
-Existen varios algoritmos para calendarizar los trabajos en el c\'omputo en la nube. La mayor ventaja de estos algoritmos es obtener el mayor rendimiento. Los principales ejemplos de algoritmos de calendarizaci\'on son: \textit{FCFS, Round Robin, Min-Min, Max-Min y algoritmos de metaheurísticas}  (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}, p. 1).
+Existen varios algoritmos para calendarizar los trabajos en el c\'omputo en la nube. La mayor ventaja de estos algoritmos es obtener el mayor rendimiento. Los principales ejemplos de algoritmos de calendarizaci\'on son: \textit{FCFS, Round Robin, Min-Min, Max-Min y algoritmos de metaheurísticas}  \cite{shimpy2014different}.
 
 
 
@@ -112,7 +115,7 @@ De los algoritmos mencionados anteriormente, se presentan los siguientes:
 
 \subsection{Odoo - Sistema ERP \textit{OpenSource} para caso de Prueba}
 
-Para obtener una muestra representativa del tamaño de tareas y tiempo de ejecución de las mismas, en este trabajo se hace uso de \textit{Odoo}, que es un sistema completo de gestión empresarial, de código abierto y sin costes de licencias que cubre las necesidades de las áreas de: Contabilidad y Finanzas, Ventas, RRHH, Compras, Proyectos, entre otras. (\citeauthor{odooWiki}, \citeyear{odooWiki}).
+Para obtener una muestra representativa del tamaño de tareas y tiempo de ejecución de las mismas, en este trabajo se hace uso de \textit{Odoo}, que es un sistema completo de gestión empresarial, de código abierto y sin costes de licencias que cubre las necesidades de las áreas de: Contabilidad y Finanzas, Ventas, RRHH, Compras, Proyectos, entre otras. \cite{odooWiki}.
 
 \textit{Odoo} ofrece una plataforma Web, en donde se pueden administrar aplicaciones sobre gestión de recursos empresariales, además de permitir instalar aún más módulos, los cuales se pueden encontrar de manera gratuita o con algunas licencias por parte de sus desarrolladores.
 
@@ -123,10 +126,10 @@ El objetivo de éste proyecto es minimizar el tiempo de ejecución y el costo de
 Optimización por Enjambre de Partículas (\textit{PSO}) es una técnica de optimización basada en la búsqueda de un óptimo global, introducida por Kennedy and Eberhart \cite{pandey2010}. 
 
 Se eligió  \textit{PSO} debido al concepto simple que tiene \cite{poli2007},  la implementación requiere de simples operaciones matemáticas que en términos de computación no consume memoria  y la velocidad de convergencia es relativamente rápida dependiendo del número de partículas \cite{eberhart1995}.\\ 
-Está claro que como toda \textit{metaheurística, PSO} no garantiza la obtención de una solución óptima en todos los casos (\cite{osman2012}).
+Está claro que como toda \textit{metaheurística, PSO} no garantiza la obtención de una solución óptima en todos los casos \cite{osman2012}.
 
 \subsection{Algoritmo \textit{PSO} y un ambiente en la nube}
-\textit{PSO} permite optimizar un problema en base a una población de soluciones candidatas, que llevan el término \textit{“partículas”}, dichas partículas se mueven en un espacio de búsqueda (tienen en cuenta dos aspectos; la posición y la velocidad). Cada una realiza un movimiento influido por su mejor posición local hasta ése momento y por las mejores posiciones globales encontradas en todo el enjambre mientras recorren el espacio de búsqueda (\cite{poli2007}).
+\textit{PSO} permite optimizar un problema en base a una población de soluciones candidatas, que llevan el término \textit{“partículas”}, dichas partículas se mueven en un espacio de búsqueda (tienen en cuenta dos aspectos; la posición y la velocidad). Cada una realiza un movimiento influido por su mejor posición local hasta ése momento y por las mejores posiciones globales encontradas en todo el enjambre mientras recorren el espacio de búsqueda \cite{poli2007}.
 
 Una solución potencial es representada en \textit{PSO} por un vector (partícula). Cada partícula \textit{i} tiene la misma dimensión \textit{n} y es representada de la siguiente manera \cite{pandey2010}: $X(i) = (x_{(i,1)},x_{(i,2)},...,x_{(i,n)})  $.
 
@@ -155,7 +158,7 @@ En el algoritmo (\ref{alg:PSO}) se muestran los pasos del PSO. Inicia con una in
 El valor asignado a la dimensión de las partículas son los índices de los recursos (Máquinas Virtuales). Por lo tanto, cada tarea representa un mapeo de una tarea en todas las máquinas virtuales. Entonces la dimensión de una partícula depende del número de máquinas virtuales.
 Para cada partícula se calcula un $fitnessvalue$ que es el óptimo local al nivel de partícula que se evalúa y se actualiza. 
 Después se evalúa la mejor partícula como $gbest$ que sería el óptimo del enjambre.
-Se delimita un número $m$, mientras no se llegue al límite la iteración continua; esto para no entrar a un ciclo que nunca termina, ya que PSO  no garantiza la obtención de una solución óptima en todos los casos (\cite{osman2012}).
+Se delimita un número $m$, mientras no se llegue al límite la iteración continua; esto para no entrar a un ciclo que nunca termina, ya que PSO  no garantiza la obtención de una solución óptima en todos los casos \cite{osman2012}.
 
 \section{Resultados}
 
@@ -275,7 +278,6 @@ El costo de la instancia en Amazon es \$0.052 USD, entonces se configuró la car
 Al tener la configuración completa del centro de datos en Cloudsim, se procedió a realizar la simulación.
 Para la simulación, el programa fue ejecutado 30 veces y se ordenó ascendentemente la suma total del tiempo de ejecución de cada simulación. Se eliminaron las dos con menor tiempo y las dos con mayor tiempo, con el fin de evitar sesgos ya sea de manera positiva o negativa.
 
-\setcounter{figure}{24}
 \renewcommand\thefigure{\arabic{figure}}
 \begin{figure}[h!] 
 	\centering
